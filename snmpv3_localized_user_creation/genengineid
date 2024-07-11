@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# Copyright (c) 2024 Arista Networks, Inc.  All rights reserved.
+
+"""
+genengineid - generates an SNMP EngineID for Arista devices
+using a random uuid.  This is different than the method used
+when configuring via the cli, so any users generated using this
+engineID will be incompatible with any added from the cli.
+"""
+
+import uuid
+
+# Arista's PEN, with the high bit set:
+engineId = b'\x80\x00\x75\x71'
+# Type 5: "Administratively assigned octets"
+engineId += b'\x05'
+# Add a random (type 4) UUID:
+engineId += uuid.uuid4().bytes
+
+print( engineId.hex() )
