@@ -1,7 +1,8 @@
 # Testing
-RFC2574 says
 
-## A.3.1
+## MD5
+From RFC2574, regarding using MD5:
+
 ```
 A.3.1.  Password to Key Sample Results using MD5
 
@@ -30,7 +31,9 @@ prompt> v3localize maplesyrup md5 000000000000000000000002
 526f5eed9fcce26f8964c2930787d82b
 ```
 
-## A.3.2
+## SHA
+From RFC2574, regarding using SHA:
+
 ```
 A.3.2.  Password to Key Sample Results using SHA
 
